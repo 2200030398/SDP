@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body class="bd" style="background-image: url({% static 'backgroundimage.jpg' %});">
+
+    <h1 class="header">SIYA RAM
+      <img src="{% static 'logo1.jpg' %}" alt="Logo" class="logo">
+    </h1>
+    <div class="topnav">
+      <a href="home" name="home">HOME</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">SHOP</a>
+      <a href="#">OUR PRODUCTS</a>
+        <a href="{% url 'signup' %}">SIGNUP</a>
+      <a href="{% url 'login' %}">LOGIN</a>
+    </div>
+
+    <div class="image-container">
+        <div class="left-image">
+            <a href="{% url 'gir' %}">
+                <img src="{% static 'left_image.jpg' %}" alt="Left Image" class="left-image">
+            </a>
+        </div>
+        <div class="right-image">
+            <a href="{% url 'gir' %}">
+                <img src="{% static 'right_image.jpg' %}" alt="Right Image" class="right-image">
+            </a>
+        </div>
+    </div>
+
+{% block body %}
+
+{% endblock %}
+</body>
+</html>
